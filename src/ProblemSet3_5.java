@@ -106,7 +106,14 @@ public class ProblemSet3_5 {
 	 */
 	
 	public void fibonacci(int n) {
-		
+		int prevnum1 = in.nextInt();
+		int prevnum2 = in.nextInt();
+		if (prevnum1 < 0 || prevnum2 < 0) {
+			System.out.println("Enter a number greater than or equal to 0.");
+			}
+		for (int i = 0; i > 0; i++) {
+			int fibnum = prevnum1 + prevnum2;
+		}
 	}
 	
 	/**
