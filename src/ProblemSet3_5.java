@@ -13,17 +13,25 @@
  * 
  * This problem set is worth 25 points and is due no later than 11:59pm on October 28, 2018.
  */
-
+import java.util.Scanner;
 public class ProblemSet3_5 {
 	
 	public static void main(String[] args) {
 		ProblemSet3_5 ps = new ProblemSet3_5();
+		Scanner in = new Scanner(System.in);
 		
+		System.out.println("Enter starting value: ");
+		int start = in.nextInt();
+		System.out.println("Enter ending value: ");
+		int end = in.nextInt();
 		// test your solutions here
+		ps.primes(start, end);
 		
-		ps.primes(1, 1000);
+		/**System.out.println("Enter year: ");
+		int year = in.nextInt();
+		ps.leapYears(int count);
+		*/
 	}
-	
 	/**
 	 * How many prime numbers are there between @start and @end, where @start and @end
 	 * are positive integers in the range [1, @Integer.MAX_VALUE]?
@@ -36,8 +44,28 @@ public class ProblemSet3_5 {
 	 */
 	
 	public void primes(int start, int end) {
-		
-	}
+		int count = 0;
+		if (start <= 0) {
+			System.out.println("Enter a POSITIVE, NONZERO value: ");
+		}
+		int i = 2;
+		while (start < end) {
+			if ((start % i != 0) && (end % i != 0)) {
+				count++;
+			}
+			while () {
+				if () {
+					
+				}
+			}	
+		}
+		if (count != 1) {
+			System.out.println("There are " + count + " prime numbers.");
+			}		
+		else if (count == 1) {
+			System.out.println("There is " + count + " prime numbers.");
+			}
+		}
 	
 	/**
 	 * What are the next @count leap years?
@@ -50,7 +78,7 @@ public class ProblemSet3_5 {
 	 */
 	
 	public void leapYears(int count) {
-		
+
 	}
 	
 	/**
