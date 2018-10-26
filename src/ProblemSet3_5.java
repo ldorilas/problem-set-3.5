@@ -134,8 +134,8 @@ public class ProblemSet3_5 {
 			}
 			for (int i = 1; i > 0; i++) {
 				if (n > 2) {
-					int fibnum1 = fibnum;
-					int fibnum2;
+					//int fibnum1 = fibnum;
+					//int fibnum2;
 					fibnum2 = prevnum2;
 					fibnum1 = fibnum2 + fibnum1;
 				}
