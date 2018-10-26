@@ -20,17 +20,25 @@ public class ProblemSet3_5 {
 		ProblemSet3_5 ps = new ProblemSet3_5();
 		Scanner in = new Scanner(System.in);
 		
-		System.out.println("Enter starting value: ");
+		/**System.out.println("Enter starting value: ");
 		int start = in.nextInt();
 		System.out.println("Enter ending value: ");
 		int end = in.nextInt();
 		// test your solutions here
 		ps.primes(start, end);
 		
-		/**System.out.println("Enter year: ");
+		System.out.println("Enter year: ");
 		int year = in.nextInt();
-		ps.leapYears(int count);
+		ps.leapYears( );
+		
+		System.out.println("Enter number: ");
+		int number = in.nextInt();
+		ps.palindromicNumbers(number);
 		*/
+		
+		System.out.println("Enter value: ");
+		int n = in.nextInt();
+		ps.fibonacci(n);
 	}
 	/**
 	 * How many prime numbers are there between @start and @end, where @start and @end
@@ -43,7 +51,7 @@ public class ProblemSet3_5 {
 	 * @param end
 	 */
 	
-	public void primes(int start, int end) {
+	/**public void primes(int start, int end) {
 		int count = 0;
 		if (start <= 0) {
 			System.out.println("Enter a POSITIVE, NONZERO value: ");
@@ -66,6 +74,7 @@ public class ProblemSet3_5 {
 			System.out.println("There is " + count + " prime numbers.");
 			}
 		}
+	*/
 	
 	/**
 	 * What are the next @count leap years?
@@ -90,9 +99,15 @@ public class ProblemSet3_5 {
 	 * @param number
 	 */
 	
-	public void palindromicNumbers(int number) {
-		
+	/**public void palindromicNumbers(int number) {
+		boolean isPalindromic = false;
+		for (int i = 0; i < number; i++) {
+			if (number ) {
+				isPalindromic = true;
+			}
+		}
 	}
+	*/
 	
 	/**
 	 * What is the @nth Fibonacci number, where @n is a positive integer?
@@ -106,13 +121,32 @@ public class ProblemSet3_5 {
 	 */
 	
 	public void fibonacci(int n) {
-		int prevnum1 = in.nextInt();
-		int prevnum2 = in.nextInt();
-		if (prevnum1 < 0 || prevnum2 < 0) {
-			System.out.println("Enter a number greater than or equal to 0.");
-			}
-		for (int i = 0; i > 0; i++) {
+		int prevnum1 = 0;
+		int prevnum2 = 1;
+		// 1 = 0 + 1
+		if (n == 1) {
 			int fibnum = prevnum1 + prevnum2;
+			System.out.println("The " + n + "st Fibonacci number is " + fibnum + ".");
+			}
+		else if (n == 2) {
+			int fibnum = fibnum + prevnum2;
+			System.out.println("The " + n + "nd Fibonacci number is " + fibnum + ".");
+			}
+			for (int i = 1; i > 0; i++) {
+				if (n > 2) {
+					int fibnum1 = fibnum;
+					int fibnum2;
+					fibnum2 = prevnum2;
+					fibnum1 = fibnum2 + fibnum1;
+				}
+				// 2 = 1 + 1 
+				// 3 = 2 + 1
+				// 5 = 3 + 2
+				// 8 = 5 + 3
+				// 13 = 8 + 5
+				// 21 = 13 + 8	
+			}
+			System.out.println("The " + n + "th Fibonacci number is " + fibnum + ".");
 		}
 	}
 	
