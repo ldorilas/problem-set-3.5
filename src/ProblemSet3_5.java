@@ -129,13 +129,13 @@ public class ProblemSet3_5 {
 			System.out.println("The " + n + "st Fibonacci number is " + fibnum + ".");
 			}
 		else if (n == 2) {
-			int fibnum = fibnum + prevnum2;
+			int fibnum1 = fibnum + prevnum2;
 			System.out.println("The " + n + "nd Fibonacci number is " + fibnum + ".");
 			}
+			int fibnum2;
+		else if (n > 2) {
 			for (int i = 1; i > 0; i++) {
 				if (n > 2) {
-					//int fibnum1 = fibnum;
-					//int fibnum2;
 					fibnum2 = prevnum2;
 					fibnum1 = fibnum2 + fibnum1;
 				}
@@ -148,6 +148,7 @@ public class ProblemSet3_5 {
 			}
 			System.out.println("The " + n + "th Fibonacci number is " + fibnum + ".");
 		}
+
 	}
 	
 	/**
